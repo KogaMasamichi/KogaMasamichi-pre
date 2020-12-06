@@ -1,0 +1,75 @@
+/*mixin*/
+
+@mixin pc {
+    @media screen and (min-width: 1075px) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (max-width: 1074px) {
+        @content;
+    }
+}
+
+@mixin sp {
+    @media screen and (max-width: 600px) {
+        @content;
+    }
+}
+
+/*変数*/
+
+$brown: #A1938689;
+$gray: #707070;
+$beige: #A193861F;
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Roboto Mono for Powerline;
+    line-height: 1.67;
+}
+
+.catch {
+    font-family: Hiragino Mincho Pro;
+}
+
+.inner {
+    width: 84vw;
+    margin: 0 auto;
+    padding-bottom: 70px;
+
+    @include tab {
+        width: 89vw;
+        padding-bottom: 60px;
+    }
+}
+
+.title {
+    padding-top: 260px;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.4vw;
+    color: $gray;
+
+    &:after {
+        content: "";
+        border-top: 1px solid;
+        width: 7.7vw;
+        margin-left: 1.7vw;
+    }
+
+    @include tab {
+        padding-top: 160px;
+    }
+
+    @include sp {
+        padding-top: 60px;
+    }
+}

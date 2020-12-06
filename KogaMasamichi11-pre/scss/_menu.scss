@@ -1,0 +1,86 @@
+    .me-wrap {
+        margin-top: 11px;
+        display: flex;
+        justify-content: space-between;
+
+        @include sp {
+            flex-direction: column;
+        }
+    }
+
+
+    .me-item {
+        width: 25vw;
+
+        @include tab {
+            width: 30%;
+        }
+
+        @include sp {
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        &__img {
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transition: 0.5s;
+            }
+
+            &:hover {
+                img {
+                    transform: rotate(10deg) scale(1.2, 1.2);
+                    transform-origin: 50% 50%;
+                    transition: 0.5s;
+                }
+            }
+        }
+
+        &__title {
+            text-align: center;
+            font-size: 2.3vw;
+            margin-top: 37px;
+
+
+            letter-spacing: 0.1em;
+
+            @include tab {
+                font-size: 2rem;
+            }
+
+            @include sp {
+                font-size: 3rem;
+                margin-top: 30px;
+                margin-left: 13px;
+                text-align: left;
+            }
+        }
+
+        &__text {
+            font-size: 1.6rem;
+            letter-spacing: 0.1em;
+            margin-top: 34px;
+            padding: 0 0.8vw;
+
+            @include sp {
+                margin-top: 30px;
+                padding: 0 24px 0 13px;
+            }
+        }
+
+        &__price {
+            font-size: 1.6rem;
+            letter-spacing: 0.1em;
+            text-align: right;
+            margin-top: 34px;
+            padding: 0 0.8vw;
+
+            @include sp {
+                margin-top: 13px;
+                padding: 13px;
+            }
+        }
+    }

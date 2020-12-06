@@ -1,0 +1,793 @@
+@charset "UTF-8";
+
+/* 
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com 
+Twitter: @rich_clark
+*/
+*,
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+body {
+    line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+nav,
+ul,
+li {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+a:visited {
+    color: inherti;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color: #ff9;
+    color: #000;
+    text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color: #ff9;
+    color: #000;
+    font-style: italic;
+    font-weight: bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+    border-bottom: 1px dotted;
+    cursor: help;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #cccccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+input,
+select {
+    vertical-align: middle;
+}
+
+/*# sourceMappingURL=reset.css.map */
+/*mixin*/
+/*変数*/
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Roboto Mono for Powerline;
+    line-height: 1.67;
+}
+
+.catch {
+    font-family: Hiragino Mincho Pro;
+}
+
+.inner {
+    width: 84vw;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+@media screen and (max-width: 1074px) {
+    .inner {
+        width: 89vw;
+        padding-bottom: 60px;
+    }
+}
+
+.title {
+    padding-top: 260px;
+    display: flex;
+    align-items: center;
+    font-size: 1.8rem;
+    letter-spacing: 0.4vw;
+    color: #707070;
+}
+
+.title:after {
+    content: "";
+    border-top: 1px solid;
+    width: 7.7vw;
+    margin-left: 1.7vw;
+}
+
+@media screen and (max-width: 1074px) {
+    .title {
+        padding-top: 160px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .title {
+        padding-top: 60px;
+    }
+}
+
+header {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 10;
+}
+
+@media screen and (max-width: 1074px) {
+    header {
+        justify-content: space-between;
+        width: 89%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        transform: none;
+        position: static;
+        background-color: #fff;
+        height: 70px;
+        line-height: 70px;
+        margin: 0 20px;
+    }
+}
+
+.hd-logo {
+    font-size: 3.8rem;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 1074px) {
+    .hd-logo {
+        color: #ddd;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hd-logo {
+        color: #000;
+        font-size: 2.2rem;
+    }
+}
+
+nav {
+    width: 30vw;
+    margin-left: 1.5vw;
+}
+
+@media screen and (max-width: 1074px) {
+    nav {
+        display: none;
+    }
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    font-size: 1.4vw;
+}
+
+ul li {
+    margin-left: 1.5vw;
+    letter-spacing: 0.14vw;
+}
+
+ul li:nth-child(2),
+ul li:nth-child(3),
+ul li:nth-child(4) {
+    color: #707070;
+}
+
+ul li:first-child:after {
+    content: "";
+    display: flex;
+    flex-direction: column;
+    width: 4vw;
+    border-bottom: 1px solid #000;
+}
+
+.first-v {
+    height: 100vh;
+    background: url(../img/Blond%20woman%20with%20long%20curly%20beautiful%20hair.png) no-repeat right/contain;
+    position: relative;
+}
+
+@media screen and (max-width: 1074px) {
+    .first-v {
+        background-size: cover;
+        background-position: top;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .first-v {
+        height: 90vh;
+        background-size: cover;
+        background-position: left;
+    }
+}
+
+.fv-wrap {
+    font-size: 3.8rem;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+}
+
+@media screen and (min-width: 1075px) {
+    .fv-wrap {
+        height: 35vh;
+    }
+}
+
+@media screen and (max-width: 1074px) {
+    .fv-wrap {
+        left: 50%;
+        width: 100%;
+        color: #fff;
+        text-shadow: 0px 3px 16px #000000;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .fv-wrap {
+        top: 45%;
+        height: 20vh;
+        flex-direction: column-reverse;
+    }
+}
+
+.fv-wrap .catch {
+    letter-spacing: 0.1em;
+}
+
+@media screen and (min-width: 1075px) {
+    .fv-wrap .catch {
+        text-align: right;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .fv-wrap .catch {
+        font-size: 2.3rem;
+    }
+}
+
+.fv-wrap .fv-catch {
+    line-height: 128px;
+    font-family: Zapfino;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 600px) {
+    .fv-wrap .fv-catch {
+        font-size: 2.8rem;
+        line-height: 95px;
+    }
+}
+
+#concept {
+    background: linear-gradient(to bottom, #A193861F 0, #A193861F 42%, #A1938689 42%, #A1938689 100%);
+}
+
+@media screen and (max-width: 600px) {
+    #concept {
+        background: linear-gradient(to bottom, #A193861F 0, #A193861F 25%, #A1938689 25%, #A1938689 100%);
+    }
+}
+
+.co-img__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11px;
+}
+
+@media screen and (max-width: 600px) {
+    .co-img__wrap {
+        margin-top: 50px;
+    }
+}
+
+.co-img__wrap .co-img:first-child {
+    margin-right: 0.8vw;
+}
+
+@media screen and (max-width: 600px) {
+    .co-img__wrap .co-img:first-child {
+        margin-right: 7px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .co-img__wrap .co-img {
+        width: 49%;
+        height: 30.7vh;
+    }
+}
+
+.co-img__wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: right;
+}
+
+@media screen and (max-width: 600px) {
+    .co-img__wrap img {
+        object-position: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .co-img__wrap .img {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1075px) {
+    .co-img__wrap .sp-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1074px) {
+    .co-img__wrap .sp-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .co-img__wrap .sp-img {
+        display: block;
+    }
+}
+
+.catch-wrap {
+    margin-top: 70px;
+    color: #fff;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1074px) {
+    .catch-wrap {
+        flex-direction: column;
+        margin-top: 50px;
+    }
+}
+
+.catch-wrap .catch {
+    font-size: 1.8rem;
+    letter-spacing: 0.4em;
+}
+
+@media screen and (max-width: 1074px) {
+    .catch-wrap .catch {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .catch-wrap .catch {
+        font-size: 1.8rem;
+    }
+}
+
+.catch-wrap .catch-text {
+    font-size: 1.6rem;
+    width: 40vw;
+    overflow: hidden;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 1074px) {
+    .catch-wrap .catch-text {
+        width: 100%;
+        margin-top: 18px;
+    }
+}
+
+.me-wrap {
+    margin-top: 11px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 600px) {
+    .me-wrap {
+        flex-direction: column;
+    }
+}
+
+.me-item {
+    width: 25vw;
+}
+
+@media screen and (max-width: 1074px) {
+    .me-item {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .me-item {
+        width: 100%;
+        margin-top: 50px;
+    }
+}
+
+.me-item__img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.me-item__img img {
+    width: 100%;
+    transition: 0.5s;
+}
+
+.me-item__img:hover img {
+    transform: rotate(10deg) scale(1.2, 1.2);
+    transform-origin: 50% 50%;
+    transition: 0.5s;
+}
+
+.me-item__title {
+    text-align: center;
+    font-size: 2.3vw;
+    margin-top: 37px;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (max-width: 1074px) {
+    .me-item__title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .me-item__title {
+        font-size: 3rem;
+        margin-top: 30px;
+        margin-left: 13px;
+        text-align: left;
+    }
+}
+
+.me-item__text {
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    margin-top: 34px;
+    padding: 0 0.8vw;
+}
+
+@media screen and (max-width: 600px) {
+    .me-item__text {
+        margin-top: 30px;
+        padding: 0 24px 0 13px;
+    }
+}
+
+.me-item__price {
+    font-size: 1.6rem;
+    letter-spacing: 0.1em;
+    text-align: right;
+    margin-top: 34px;
+    padding: 0 0.8vw;
+}
+
+@media screen and (max-width: 600px) {
+    .me-item__price {
+        margin-top: 13px;
+        padding: 13px;
+    }
+}
+
+#access {
+    background-color: #A193861F;
+    padding-bottom: 70px;
+}
+
+#access .title {
+    width: 83vw;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    #access {
+        padding-bottom: 63px;
+    }
+}
+
+.ac-wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: #D0C5BA;
+    margin-top: 6px;
+}
+
+@media screen and (max-width: 1074px) {
+    .ac-wrap {
+        margin-top: 50px;
+        flex-direction: column-reverse;
+    }
+}
+
+.ac-wrap .ac-nv {
+    width: 83vw;
+    height: 192px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.ac-wrap .ac-nv__title {
+    font-size: 2.4rem;
+    color: #00000038;
+    letter-spacing: 0.18vw;
+}
+
+.ac-wrap .ac-nv__info {
+    font-size: 1.6rem;
+    color: #fff;
+    letter-spacing: 0.12vw;
+}
+
+@media screen and (max-width: 1074px) {
+    .ac-wrap .ac-nv {
+        width: 89%;
+        margin: 30px auto 60px;
+    }
+}
+
+.ac-wrap .ac-map {
+    position: absolute;
+    right: 0;
+    width: 60.5vw;
+    height: 100%;
+}
+
+.ac-wrap .ac-map .map {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1074px) {
+    .ac-wrap .ac-map {
+        position: static;
+        width: 100%;
+        height: 35vh;
+    }
+}
+
+footer {
+    width: 83vw;
+    margin: 0 auto;
+    padding: 165px 0 60px;
+}
+
+@media screen and (max-width: 1074px) {
+    footer {
+        width: 89%;
+        padding: 70px 0 20px;
+    }
+}
+
+.footer-wrap {
+    border-top: 1px solid #707036;
+}
+
+.f-content {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (max-width: 1074px) {
+    .f-content {
+        margin-top: 70px;
+        flex-direction: column-reverse;
+    }
+}
+
+.f-item {
+    display: flex;
+    font-size: 3.2rem;
+}
+
+@media screen and (max-width: 1074px) {
+    .f-item {
+        margin-top: 62px;
+        font-size: 1.8rem;
+        width: 100%;
+        justify-content: space-between;
+    }
+}
+
+.f-item__logo {
+    color: #70704D;
+    letter-spacing: 0.1em;
+}
+
+.sns {
+    display: flex;
+    align-items: center;
+    margin-left: 26px;
+}
+
+.sns p {
+    display: flex;
+}
+
+.sns .f-icon {
+    color: #000;
+    font-size: 2rem;
+}
+
+.sns .f-icon:last-child {
+    margin-left: 9px;
+}
+
+.reserve {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 40px;
+    border: 1px solid;
+    color: #707070;
+    font-size: 1.8rem;
+    letter-spacing: 0.1em;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,70 @@
+.first-v {
+    height: 100vh;
+    background: url(../img/Blond%20woman%20with%20long%20curly%20beautiful%20hair.png) no-repeat right/contain;
+    position: relative;
+
+    @include tab {
+        background-size: cover;
+        background-position: top;
+    }
+
+    @include sp {
+        height: 90vh;
+        background-size: cover;
+        background-position: left;
+    }
+}
+
+
+.fv-wrap {
+    font-size: 3.8rem;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+
+    @include pc {
+        height: 35vh;
+    }
+
+    @include tab {
+        left: 50%;
+        width: 100%;
+        color: #fff;
+        text-shadow: 0px 3px 16px #000000;
+    }
+
+    @include sp {
+        top: 45%;
+        height: 20vh;
+        flex-direction: column-reverse;
+    }
+
+    .catch {
+        @include pc {
+            text-align: right;
+        }
+
+        @include sp {
+            font-size: 2.3rem;
+        }
+
+        letter-spacing: 0.1em;
+    }
+
+    .fv-catch {
+        line-height: 128px;
+
+        @include sp {
+            font-size: 2.8rem;
+            line-height: 95px;
+        }
+
+        font-family: Zapfino;
+        letter-spacing: 0.1em;
+    }
+}
