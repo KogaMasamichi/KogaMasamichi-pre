@@ -16,7 +16,7 @@
     }
 
     .co-img:first-child {
-        margin-right: 0.8vw;
+        margin-right: 1rem;
 
         @include sp {
             margin-right: 7px;
@@ -78,7 +78,7 @@
 
 
     .catch {
-        font-size: 1.8rem;
+        font-size: 4rem;
         letter-spacing: 0.4em;
 
         @include tab {
